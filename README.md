@@ -91,7 +91,7 @@ ref: voilating_SR_principle.js, enforcing_SR_principle.js , logger_SR.js
 
 > NOTE- **use open-close to break out deep nested switch or if-else statements but at the same time dont overengineer it though if a small modification does the trick then no need to just create new class or function for a new functionality**
 
-> C) liskov-substitution principle (highly usable in OOPS style programming)
+> C) liskov-substitution principle (highly usable in OOPS style programming) but better to follow COMPOSITION PATTERN INSTEAD ALWAYS
 
 - for an object of class cars, and every single place we use the cars class we should be able to replace it with one of its subclass(car type orcompany etc..) then typeCars class that is inherits from cars class then every single place we use cars we should be able to use typeCars class
 
@@ -104,6 +104,15 @@ ref: enforcing_liskovSub_principle.js
 > NOTE- 🎯: IMP however if we want the duck to swim also we wud need a flyingSwimming base class and their could be n number of permutations like this hence its always better to adding in new functionality rather then inheriting it known as COMPOSITION
 
 > following liskov-substitution it becomes difficult actually to handle these complex inheritance hence it is always better to go with the composition approach rather than inheritance.
+
+> D) Interface-Segregation
+
+- **a/c to this principle whenever we have an interface make sure that every class that implements this interface make use of all the active members of the interface initially and implements them effectively leaving no unused interface member**
+
+- voilation: ref- voilating_IS_principle.js
+- enforcing: ref- einforcing_IS_principle.js
+
+- **idea is to break down the inital class into components/individual-interfaces that can be just assigned later to the class a/c to the requirement which again has lot of similarity with the composition fashion**
 
 ---
 
