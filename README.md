@@ -114,6 +114,18 @@ ref: enforcing_liskovSub_principle.js
 
 - **idea is to break down the inital class into components/individual-interfaces that can be just assigned later to the class a/c to the requirement which again has lot of similarity with the composition fashion**
 
+> E) Dependency-Inversion principle (that basically means implementing the abstraction logic in code) basically ADAPTER/FACADE pattern
+
+                    Your_STORE_API <-----> GPAY API
+
+- **now the store_api is directly calling these GPAY api exposed methods via webSDK or webAPI from the controllers section of the store_api, which leads to a heavy coupling between store_api and GPAY api**.
+
+- **to resolve this coupling we introduce a piece in middle as abstract interface as wrapper like in this case Payment-Processor**
+
+                    Your_STORE_API --->Payment-Processor<--- GPAY API
+                                                    ^-------- Stripe API
+                                                ^-------- Paypal API
+
 ---
 
 > ## 3. Inheritance vs Compositions
