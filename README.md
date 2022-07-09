@@ -90,3 +90,17 @@ ref: voilating_SR_principle.js, enforcing_SR_principle.js , logger_SR.js
 - now each class represent a new question type and handling those question type now in future if we want to have new question Type we can just create a new Class to handle that and then pass in the questions array as that new instance of this class.
 
 > NOTE- **use open-close to break out deep nested switch or if-else statements but at the same time dont overengineer it though if a small modification does the trick then no need to just create new class or function for a new functionality**
+
+> C) liskov-substitution principle (highly usable in OOPS style programming)
+
+- for an object of class cars, and every single place we use the cars class we should be able to replace it with one of its subclass(car type orcompany etc..) then typeCars class that is inherits from cars class then every single place we use cars we should be able to use typeCars class
+
+- **in short the subtype class 'S' that inherits from the base class 'B' shud be placed anywhere inplace of the 'B' base class and the 'S' class shud be able to enter the 'B' function without breaking anything.**
+
+- every function of the base class must be comaptible with the subclass.
+
+ref: enforcing_liskovSub_principle.js
+
+> NOTE- 🎯: IMP however if we want the duck to swim also we wud need a flyingSwimming base class and their could be n number of permutations like this hence its always better to adding in new functionality rather then inheriting it known as COMPOSITION
+
+> following liskov-substitution it becomes difficult actually to handle these complex inheritance hence it is always better to go with the composition approach rather than inheritance.
