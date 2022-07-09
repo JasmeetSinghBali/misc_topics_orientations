@@ -31,6 +31,8 @@ let source = of(2000,1000);
 //     console.log(value)
 // });
 
+// @@@@@@@@@@
+
 // console.log('\n [concatMap]');
 // // 1. concatMap
 // const concatMapExample = source.pipe(
@@ -42,6 +44,8 @@ let source = of(2000,1000);
 //     console.log(value)
 // });
 
+// @@@@@@@@@@
+
 // console.log('\n [mergeMap]');
 // // 2. mergeMap
 // const mergeMapExample = source.pipe(
@@ -52,18 +56,30 @@ let source = of(2000,1000);
 //     console.log(value)
 // });
 
+// @@@@@@@@@@
+
 // 📝: an observable via interval() that emits number every 1000 ms i.e 1 sec
-const sourceInterval = interval(1000);
-// 📝: a second observable , delaying with only 10 ms and take only first four number emmited by sourceInterval observable
-const delayedInterval = sourceInterval.pipe(delay(10),take(4));
+// const sourceInterval = interval(1000);
+// // 📝: a second observable , delaying with only 10 ms and take only first four number emmited by sourceInterval observable
+// const delayedInterval = sourceInterval.pipe(delay(10),take(4));
 
-console.log('\n [exhaustMap]');
-// 3. exhaustMap
+// console.log('\n [exhaustMap]');
+// // 3. exhaustMap
 
-// 📝: rxjs merge() is used to merge different observable streams so that they run at same time
-merge(
-    delayedInterval, // delayed observable that gets completely ignored by exhaustMap
-    of(true) // instant observable that returns true , hence we get 5 values not 4 values
-).pipe(exhaustMap(_ => sourceInterval.pipe(take(5)))).subscribe(val=>{
-    console.log(val)
-})
+// // 📝: rxjs merge() is used to merge different observable streams so that they run at same time
+// merge(
+//     delayedInterval, // delayed observable that gets completely ignored by exhaustMap
+//     of(true) // instant observable that returns true , hence we get 5 values not 4 values
+// ).pipe(exhaustMap(_ => sourceInterval.pipe(take(5)))).subscribe(val=>{
+//     console.log(val)
+// })
+
+// @@@@@@@@@@
+
+
+// console.log('\n [switchMap]');
+// 4. switchMap
+
+// example click-listener that switch on the basis of user action
+// every time user clicks a new observable value with interval gets passed in the pipe()
+// fromEvent(document,'click').pipe(switchMap(()=>interval(1000)));

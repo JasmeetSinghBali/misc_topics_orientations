@@ -47,3 +47,7 @@
 - **ref: index.ts**
 
 - **used in situation where we need to merge two observable streams and we need to just have concern on the observable stream processing that gets executed first while the other streams get ignored completely.**
+
+> switchMap (pretty similar to exhaustMap, but instead of ignoring the other observable values getting emitted it switches to the observable value that is already processed in the pipe while dropping the old one)
+
+- **📝: IMP example- click listener, when user clicks then we stop what we are doing and process the new click event**
