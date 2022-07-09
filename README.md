@@ -51,3 +51,20 @@
 > switchMap (pretty similar to exhaustMap, but instead of ignoring the other observable values getting emitted it switches to the observable value that is already processed in the pipe while dropping the old one)
 
 - **📝: IMP example- click listener, when user clicks then we stop what we are doing and process the new click event**
+
+---
+
+> ## 2. SOLID (Design Principles)
+
+a) Single Responsibility Principle
+
+ref: voilating_SR_principle.js, enforcing_SR_principle.js , logger_SR.js
+
+- every module, class, function should only have one reason to change the inner code written inside of it.
+
+1. voilating_SR_principle.js [has 2 reasons to change]
+
+- if we change how we track the budget then we need to change the trackBudget function.
+- if we want to change the way we notify the budget is overflown in future say a notification or email
+
+2. enforcing_SR_principle.js and logger_SR.js that makes sure that any module, function or class only 1 reason to change
