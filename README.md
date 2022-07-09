@@ -56,7 +56,7 @@
 
 > ## 2. SOLID (Design Principles)
 
-a) Single Responsibility Principle
+> a) Single Responsibility Principle
 
 ref: voilating_SR_principle.js, enforcing_SR_principle.js , logger_SR.js
 
