@@ -104,3 +104,18 @@ ref: enforcing_liskovSub_principle.js
 > NOTE- 🎯: IMP however if we want the duck to swim also we wud need a flyingSwimming base class and their could be n number of permutations like this hence its always better to adding in new functionality rather then inheriting it known as COMPOSITION
 
 > following liskov-substitution it becomes difficult actually to handle these complex inheritance hence it is always better to go with the composition approach rather than inheritance.
+
+---
+
+> ## 3. Inheritance vs Compositions
+
+- refer: broken_inheritance.js
+
+- suppose the idea is to add new monster that can swim and fly, so if we are using classes we need to add a new class and shud either duplicate the fly() or the swim () function in this new SwimmingFlying class
+
+> Inheritance - we describe what objects are how they related to each other
+> Composition - describes what an object can do i.e the functionality
+
+- refer: composition_fix.js
+
+- now n number of possible functionality based monsters can be created at ease.
