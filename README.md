@@ -68,3 +68,25 @@ ref: voilating_SR_principle.js, enforcing_SR_principle.js , logger_SR.js
 - if we want to change the way we notify the budget is overflown in future say a notification or email
 
 2. enforcing_SR_principle.js and logger_SR.js that makes sure that any module, function or class only 1 reason to change
+
+> b) Open/Closed principle
+
+- every class, module or function should be open for extensions (in terms of functionality) without going into the class and change the code but closed for modifications
+
+- in short for a new functionality to be added new code should be added and the existing code should not be tampered with.
+
+- voilations of this principles will be clearly their when we are using switch, lot of if else blocks or boolean
+
+1. refer: voilating_OC_principle
+
+- suppose we want to add new type of question of type range we have to make change in question type as well the printQuic case area.
+
+- **ideally we shud only add a new type of the question and then it shud take care of the rest**
+
+2. refer: enforcing_OC_principle.js
+
+- **further to resolve this each type of questions must be handled by seprate classes or function ref: enforcing_OC_principle.js**
+
+- now each class represent a new question type and handling those question type now in future if we want to have new question Type we can just create a new Class to handle that and then pass in the questions array as that new instance of this class.
+
+> NOTE- **use open-close to break out deep nested switch or if-else statements but at the same time dont overengineer it though if a small modification does the trick then no need to just create new class or function for a new functionality**
