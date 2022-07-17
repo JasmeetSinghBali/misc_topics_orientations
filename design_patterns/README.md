@@ -28,4 +28,4 @@
 
 - ref:🎯 builder_pattern_way1.js [USE WHEN THE OBJECT IS EXTREMLY COMPLEX I.E NEEDS MULTIPLE PARTS TO BE COMPOSED]
 
-- additionally a simple approach of passing optional parameters ref: builder_pattern_way2.js [CONSTRUCTOR WAY- USE WHEN SIMPLE OBJECT NEED TO BE COMPOSED]
+- additionally a simple approach of passing optional parameters ref: builderAKAcosntructer_pattern_way2.js [CONSTRUCTOR WAY- USE WHEN SIMPLE OBJECT NEED TO BE COMPOSED]
