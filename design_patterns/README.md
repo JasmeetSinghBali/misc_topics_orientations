@@ -10,7 +10,7 @@
 
 > 1. ✔ Null Object Pattern [Saving you from repeated null checks]
 
-Scenario-description
+**Scenario-description**
 
 - 📝anytime we have null object to return, we have to apply checks wheather the object is null or not bcz if we try to access prop/methods of an null object then it gives a null error
 
@@ -19,3 +19,11 @@ Scenario-description
 - example- we have a an item.Price , Price can be null or number so we need to check wheather its null then handle that if a number then do something, now here we will have null object that will return the default value of the Price instead of null.
 
 - 🎯:IMP consider a guest and normal user case ref: null_object_pattern.js
+
+> 2. ✔ Builder Pattern
+
+**Scenario-description**
+
+- 📝 used for objects that comprise of multiple intermediatory parts or options & required fields i.e for a composition style kinda object.
+
+- ref:🎯 builder_pattern_way1.js
