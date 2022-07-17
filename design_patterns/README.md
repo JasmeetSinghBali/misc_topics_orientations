@@ -26,4 +26,6 @@
 
 - 📝 used for objects that comprise of multiple intermediatory parts or options & required fields i.e for a composition style kinda object.
 
-- ref:🎯 builder_pattern_way1.js
+- ref:🎯 builder_pattern_way1.js [USE WHEN THE OBJECT IS EXTREMLY COMPLEX I.E NEEDS MULTIPLE PARTS TO BE COMPOSED]
+
+- additionally a simple approach of passing optional parameters ref: builder_pattern_way2.js [CONSTRUCTOR WAY- USE WHEN SIMPLE OBJECT NEED TO BE COMPOSED]
